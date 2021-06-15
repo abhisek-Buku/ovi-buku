@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>event handle in converter</title>
+	<style type="text/css">
+	div{
+		width: 40%;
+		margin: 150px 50px 60px 471px;
+		align-items: center;
+		display: inline-block;
+		text-align: center;
+		position: relative;
+		background: #58D5F4;
+	}
+	input{
+		background:#B8B63D;
+	font-size: 40px;
+	color:#1E1D18 ;
+	border-radius: 23px;
+
+}
+button{
+	background: #22AA1D;
+	color:#900C3F ;
+	margin: 10px 5px 10px 5px;
+	padding: 5px;
+	font-size: 25px;
+	background: ;
+	width:112px ;
+	height: 50px;
+	border-radius: 15px;
+	opacity: 0.4;
+}
+button:hover{
+	opacity: 1.0;
+}
+</style>
+</head>
+<script type="text/javascript">
+	function area(){
+		var a=parseFloat(document.getElementById('value-1').value);
+		document.getElementById('result').innerHTML = 3.143*a*a;
+	}
+	function root(){
+		var a=parseFloat(document.getElementById('value-1').value);
+		document.getElementById('result').innerHTML = Math.sqrt(a);
+	}
+	function clr(){
+		document.getElementById('value-1').value = "";
+		document.getElementById('result').innerHTML = "";
+	}
+	function mul(){
+		var a=parseFloat(document.getElementById('value-1').value);
+		document.getElementById('result').innerHTML=Math.pow(a,2);
+	}
+	function mul1(){
+		var a=parseFloat(document.getElementById('value-1').value);
+		document.getElementById('result').innerHTML=Math.pow(a,3);
+	}
+</script>
+<body>
+	<div>
+	<h1>MR.Converter</h1>
+	Enter 1st value<input type="text" id="value-1">
+	<hr>
+	<h3>Yours answer<p id="result">00.00</p></h3>
+	<button id="bt-1" onclick="area()">Area</button>
+	<button id="bt-4" onclick="root()">Root</button>
+	<button  onclick="mul()">(x)^2</button>
+	<button  onclick="mul1()">(x)^3</button>
+	<br><button onclick="clr()">Clear</button>
+</div>
+</body>
+</html>
